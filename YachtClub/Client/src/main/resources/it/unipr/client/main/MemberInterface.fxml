@@ -1,0 +1,1001 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="anchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="510.0" prefWidth="778.0" styleClass="white_background" stylesheets="@style.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="it.unipr.client.controllers.MemberInterfaceController">
+   <children>
+      <AnchorPane prefHeight="200.0" prefWidth="200.0">
+         <children>
+            <VBox prefHeight="510.0" prefWidth="213.0" styleClass="pane" stylesheets="@style.css">
+               <children>
+                  <HBox alignment="CENTER" prefHeight="65.0" prefWidth="213.0">
+                     <children>
+                        <ImageView fitHeight="36.0" fitWidth="39.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@icons/logo.png" />
+                           </image>
+                        </ImageView>
+                        <Label prefHeight="39.0" prefWidth="152.0" text="Yacht Club" textFill="#2b3161">
+                           <font>
+                              <Font name="Colonna MT" size="32.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets left="5.0" />
+                           </HBox.margin>
+                        </Label>
+                     </children>
+                  </HBox>
+                  <HBox prefHeight="40.0" prefWidth="213.0">
+                     <children>
+                        <Button fx:id="account_btn" alignment="TOP_LEFT" mnemonicParsing="false" onAction="#showAccount" prefHeight="40.0" prefWidth="276.0" styleClass="trans-btn" stylesheets="@style.css" text="Account">
+                           <font>
+                              <Font name="System Bold" size="19.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets left="10.0" />
+                           </HBox.margin>
+                        </Button>
+                     </children>
+                     <VBox.margin>
+                        <Insets top="20.0" />
+                     </VBox.margin>
+                  </HBox>
+                  <HBox prefHeight="40.0" prefWidth="213.0">
+                     <children>
+                        <Button fx:id="boats_btn" alignment="TOP_LEFT" mnemonicParsing="false" onAction="#showBoats" prefHeight="40.0" prefWidth="276.0" styleClass="trans-btn" stylesheets="@style.css" text="Boats">
+                           <font>
+                              <Font name="System Bold" size="19.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets left="10.0" />
+                           </HBox.margin>
+                        </Button>
+                     </children>
+                     <VBox.margin>
+                        <Insets top="15.0" />
+                     </VBox.margin>
+                  </HBox>
+                  <HBox prefHeight="40.0" prefWidth="213.0">
+                     <children>
+                        <Button fx:id="races_btn" alignment="TOP_LEFT" mnemonicParsing="false" onAction="#showRaces" prefHeight="40.0" prefWidth="276.0" styleClass="trans-btn" stylesheets="@style.css" text="Races">
+                           <font>
+                              <Font name="System Bold" size="19.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets left="10.0" />
+                           </HBox.margin>
+                        </Button>
+                     </children>
+                     <VBox.margin>
+                        <Insets top="15.0" />
+                     </VBox.margin>
+                  </HBox>
+                  <HBox alignment="TOP_CENTER" prefHeight="40.0" prefWidth="213.0">
+                     <children>
+                        <Button fx:id="creditCards_btn" alignment="TOP_LEFT" mnemonicParsing="false" onAction="#showCreditCards" prefHeight="40.0" prefWidth="276.0" styleClass="trans-btn" stylesheets="@style.css" text="Credit Cards">
+                           <font>
+                              <Font name="System Bold" size="19.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets left="10.0" />
+                           </HBox.margin>
+                        </Button>
+                     </children>
+                     <VBox.margin>
+                        <Insets top="15.0" />
+                     </VBox.margin>
+                  </HBox>
+               </children>
+            </VBox>
+         </children>
+      </AnchorPane>
+      <BorderPane layoutX="213.0" prefHeight="511.0" prefWidth="565.0">
+         <top>
+            <Pane prefHeight="49.0" prefWidth="565.0" stylesheets="@style.css" BorderPane.alignment="CENTER">
+               <children>
+                  <HBox alignment="BOTTOM_LEFT" prefHeight="48.0" prefWidth="191.0">
+                     <children>
+                        <Button mnemonicParsing="false" onAction="#showAccount" prefHeight="39.0" prefWidth="43.0" styleClass="trans-btn" stylesheets="@style.css">
+                           <graphic>
+                              <ImageView fitHeight="24.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@icons/user2.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                           <HBox.margin>
+                              <Insets left="20.0" />
+                           </HBox.margin>
+                        </Button>
+                        <Label fx:id="navBar_username" prefHeight="27.0" prefWidth="92.0" text="username" textFill="#2196f3">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets bottom="5.0" />
+                           </HBox.margin>
+                        </Label>
+                     </children>
+                  </HBox>
+                  <HBox alignment="BOTTOM_RIGHT" layoutX="446.0" prefHeight="46.0" prefWidth="90.0">
+                     <children>
+                        <Button mnemonicParsing="false" onAction="#showNotification" prefHeight="35.0" prefWidth="42.0" styleClass="trans-btn" stylesheets="@style.css">
+                           <graphic>
+                              <ImageView fitHeight="24.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@icons/email.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                        <Button mnemonicParsing="false" onAction="#logout" prefHeight="35.0" prefWidth="40.0" styleClass="trans-btn" stylesheets="@style.css">
+                           <graphic>
+                              <ImageView fitHeight="24.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@icons/exit.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                     </children>
+                  </HBox>
+                  <Button fx:id="addBoat_btn" layoutX="206.0" layoutY="22.0" mnemonicParsing="false" onAction="#showAddBoatPane" styleClass="blue-btn" stylesheets="@style.css" text="Add New Boat" visible="false" />
+                  <Button fx:id="addCreditCard_btn" layoutX="310.0" layoutY="22.0" mnemonicParsing="false" onAction="#showAddCreditCardPane" styleClass="blue-btn" stylesheets="@style.css" text="Add Credit Card" visible="false" />
+               </children>
+            </Pane>
+         </top>
+         <center>
+            <StackPane prefHeight="462.0" prefWidth="565.0" BorderPane.alignment="CENTER">
+               <children>
+                  <Pane fx:id="account_pane" prefHeight="200.0" prefWidth="200.0" styleClass="pane" stylesheets="@style.css">
+                     <StackPane.margin>
+                        <Insets bottom="50.0" left="40.0" right="40.0" top="50.0" />
+                     </StackPane.margin>
+                     <children>
+                        <VBox layoutX="1.0" layoutY="9.0" prefHeight="348.0" prefWidth="484.0">
+                           <children>
+                              <Label text="Personal Details" textFill="WHITE">
+                                 <font>
+                                    <Font name="System Bold" size="15.0" />
+                                 </font>
+                                 <VBox.margin>
+                                    <Insets left="20.0" top="20.0" />
+                                 </VBox.margin>
+                              </Label>
+                              <HBox prefHeight="40.0" prefWidth="306.0">
+                                 <VBox.margin>
+                                    <Insets top="15.0" />
+                                 </VBox.margin>
+                                 <children>
+                                    <Label fx:id="fullName_label" prefHeight="25.0" prefWidth="151.0" text="full name" textFill="WHITE">
+                                       <font>
+                                          <Font size="16.0" />
+                                       </font>
+                                       <HBox.margin>
+                                          <Insets left="20.0" />
+                                       </HBox.margin>
+                                    </Label>
+                                    <Label fx:id="taxCode_label" prefHeight="25.0" prefWidth="174.0" text="tax code" textFill="WHITE">
+                                       <font>
+                                          <Font size="16.0" />
+                                       </font>
+                                       <HBox.margin>
+                                          <Insets left="20.0" />
+                                       </HBox.margin>
+                                    </Label>
+                                 </children>
+                              </HBox>
+                              <Label text="Address" textFill="WHITE">
+                                 <VBox.margin>
+                                    <Insets left="20.0" top="20.0" />
+                                 </VBox.margin>
+                                 <font>
+                                    <Font name="System Bold" size="15.0" />
+                                 </font>
+                              </Label>
+                              <HBox alignment="CENTER_LEFT" prefHeight="40.0" prefWidth="306.0">
+                                 <VBox.margin>
+                                    <Insets top="15.0" />
+                                 </VBox.margin>
+                                 <children>
+                                    <Label fx:id="address_label" prefHeight="25.0" prefWidth="161.0" text="address" textFill="WHITE">
+                                       <font>
+                                          <Font size="16.0" />
+                                       </font>
+                                       <HBox.margin>
+                                          <Insets left="20.0" />
+                                       </HBox.margin>
+                                    </Label>
+                                    <Label fx:id="postalCode_label" prefHeight="25.0" prefWidth="93.0" text="postal code" textFill="WHITE">
+                                       <font>
+                                          <Font size="16.0" />
+                                       </font>
+                                       <HBox.margin>
+                                          <Insets left="10.0" />
+                                       </HBox.margin>
+                                    </Label>
+                                 </children>
+                              </HBox>
+                              <HBox alignment="CENTER_LEFT" prefHeight="40.0" prefWidth="306.0">
+                                 <VBox.margin>
+                                    <Insets top="6.0" />
+                                 </VBox.margin>
+                                 <children>
+                                    <Label fx:id="city_label" prefHeight="25.0" prefWidth="111.0" text="city" textFill="WHITE">
+                                       <font>
+                                          <Font size="16.0" />
+                                       </font>
+                                       <HBox.margin>
+                                          <Insets left="20.0" />
+                                       </HBox.margin>
+                                    </Label>
+                                    <Label fx:id="country_label" prefHeight="25.0" prefWidth="70.0" text="country" textFill="WHITE">
+                                       <font>
+                                          <Font size="16.0" />
+                                       </font>
+                                       <HBox.margin>
+                                          <Insets left="60.0" />
+                                       </HBox.margin>
+                                    </Label>
+                                 </children>
+                              </HBox>
+                              <Label text="Account Credentials" textFill="WHITE">
+                                 <font>
+                                    <Font name="System Bold" size="15.0" />
+                                 </font>
+                                 <VBox.margin>
+                                    <Insets left="20.0" top="20.0" />
+                                 </VBox.margin>
+                              </Label>
+                              <HBox alignment="CENTER_LEFT" minWidth="0.0" prefHeight="29.0" prefWidth="484.0" styleClass="tf-box" stylesheets="@style.css">
+                                 <VBox.margin>
+                                    <Insets top="15.0" />
+                                 </VBox.margin>
+                                 <children>
+                                    <ImageView fitHeight="33.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@icons/user.png" />
+                                       </image>
+                                       <HBox.margin>
+                                          <Insets left="20.0" right="10.0" />
+                                       </HBox.margin>
+                                    </ImageView>
+                                    <Label fx:id="username_label" prefHeight="25.0" prefWidth="70.0" text="username" textFill="WHITE">
+                                       <font>
+                                          <Font size="16.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </HBox>
+                              <HBox alignment="CENTER_LEFT" prefHeight="40.0" prefWidth="306.0" styleClass="tf-box" stylesheets="@style.css" />
+                           </children>
+                        </VBox>
+                     </children>
+                  </Pane>
+                  <Pane fx:id="racePayment_pane" prefHeight="200.0" prefWidth="200.0" styleClass="blue-panel" stylesheets="@style.css" visible="false">
+                     <children>
+                        <VBox layoutX="40.0" layoutY="88.0" prefHeight="138.0" prefWidth="170.0">
+                           <children>
+                              <HBox alignment="CENTER_LEFT" prefHeight="30.0" prefWidth="245.0">
+                                 <children>
+                                    <Label text="Race:" textFill="WHITE">
+                                       <font>
+                                          <Font size="16.0" />
+                                       </font>
+                                    </Label>
+                                    <Label fx:id="raceName_label" text="race_name" textFill="WHITE">
+                                       <font>
+                                          <Font size="15.0" />
+                                       </font>
+                                       <HBox.margin>
+                                          <Insets left="20.0" />
+                                       </HBox.margin>
+                                    </Label>
+                                 </children>
+                              </HBox>
+                              <HBox alignment="CENTER_LEFT" prefHeight="30.0" prefWidth="245.0">
+                                 <children>
+                                    <Label text="Date:" textFill="WHITE">
+                                       <font>
+                                          <Font size="16.0" />
+                                       </font>
+                                    </Label>
+                                    <Label fx:id="raceDate_label" text="race_date" textFill="WHITE">
+                                       <font>
+                                          <Font size="15.0" />
+                                       </font>
+                                       <HBox.margin>
+                                          <Insets left="20.0" />
+                                       </HBox.margin>
+                                    </Label>
+                                 </children>
+                                 <VBox.margin>
+                                    <Insets top="20.0" />
+                                 </VBox.margin>
+                              </HBox>
+                              <HBox alignment="CENTER_LEFT" prefHeight="30.0" prefWidth="245.0">
+                                 <children>
+                                    <Label text="Entry Fee:" textFill="WHITE">
+                                       <font>
+                                          <Font size="16.0" />
+                                       </font>
+                                    </Label>
+                                    <Label fx:id="racePrice_label" prefHeight="21.0" prefWidth="75.0" text="race_price" textFill="WHITE">
+                                       <font>
+                                          <Font size="15.0" />
+                                       </font>
+                                       <HBox.margin>
+                                          <Insets left="20.0" />
+                                       </HBox.margin>
+                                    </Label>
+                                 </children>
+                                 <VBox.margin>
+                                    <Insets top="20.0" />
+                                 </VBox.margin>
+                              </HBox>
+                           </children>
+                        </VBox>
+                        <VBox layoutX="280.0" layoutY="87.0" prefHeight="145.0" prefWidth="163.0">
+                           <children>
+                              <Label text="Boat:" textFill="WHITE">
+                                 <font>
+                                    <Font size="16.0" />
+                                 </font>
+                              </Label>
+                              <ChoiceBox fx:id="boat_choiceBox" prefWidth="150.0" styleClass="cb" stylesheets="@style.css" />
+                              <Label text="Payment:" textFill="WHITE">
+                                 <font>
+                                    <Font size="16.0" />
+                                 </font>
+                                 <VBox.margin>
+                                    <Insets top="30.0" />
+                                 </VBox.margin>
+                              </Label>
+                              <ChoiceBox fx:id="payment_choiceBox" prefWidth="150.0" styleClass="cb">
+                                 <VBox.margin>
+                                    <Insets />
+                                 </VBox.margin>
+                              </ChoiceBox>
+                           </children>
+                        </VBox>
+                        <Label layoutX="102.0" layoutY="14.0" text="Complete Payment Process" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="22.0" />
+                           </font>
+                        </Label>
+                        <HBox fx:id="raceIban_box" alignment="CENTER_LEFT" layoutX="40.0" layoutY="237.0" prefHeight="30.0" prefWidth="360.0" visible="false">
+                           <children>
+                              <Label text="IBAN:" textFill="WHITE">
+                                 <font>
+                                    <Font size="16.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="raceIban_label" prefHeight="21.0" prefWidth="296.0" text="iban" textFill="WHITE">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets left="20.0" />
+                                 </HBox.margin>
+                              </Label>
+                           </children>
+                        </HBox>
+                        <Button layoutX="286.0" layoutY="280.0" mnemonicParsing="false" onAction="#enrollToRace" prefHeight="33.0" prefWidth="152.0" styleClass="blue-btn" stylesheets="@style.css" text="Confirm Payment">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                        </Button>
+                        <Button layoutX="51.0" layoutY="17.0" mnemonicParsing="false" onAction="#backToBoatRaces" prefHeight="21.0" prefWidth="33.0" styleClass="trans-btn" stylesheets="@style.css">
+                           <graphic>
+                              <ImageView fitHeight="26.0" fitWidth="21.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@icons/white_back.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                     </children>
+                     <StackPane.margin>
+                        <Insets bottom="60.0" left="40.0" right="40.0" top="60.0" />
+                     </StackPane.margin>
+                  </Pane>
+                  <Pane fx:id="race_pane" prefHeight="406.0" prefWidth="525.0" styleClass="blue-panel" stylesheets="@style.css" visible="false">
+                     <children>
+                        <GridPane alignment="TOP_CENTER" layoutX="66.0" layoutY="116.0" prefHeight="281.0" prefWidth="353.0">
+                           <columnConstraints>
+                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                           </columnConstraints>
+                           <rowConstraints>
+                              <RowConstraints maxHeight="404.0" minHeight="10.0" prefHeight="500.0" vgrow="SOMETIMES" />
+                           </rowConstraints>
+                           <children>
+                              <TableView fx:id="raceTable" editable="true" minWidth="0.0" onMouseClicked="#getSelectedRace" prefHeight="283.0" prefWidth="353.0" styleClass="dark-table" stylesheets="@style.css">
+                                 <columns>
+                                    <TableColumn fx:id="name_column" prefWidth="150.0" text="Race" />
+                                    <TableColumn fx:id="date_column" prefWidth="100.0" text="Date" />
+                                    <TableColumn fx:id="entryFee_column" prefWidth="100.0" text="Entry Fee" />
+                                 </columns>
+                              </TableView>
+                           </children>
+                        </GridPane>
+                        <HBox layoutX="76.0" layoutY="48.0" prefHeight="40.0" prefWidth="173.0">
+                           <children>
+                              <Label fx:id="race_label" text="Available Races" textFill="WHITE">
+                                 <font>
+                                    <Font name="System Bold" size="20.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </HBox>
+                        <Button fx:id="enroll_button" layoutX="364.0" layoutY="48.0" mnemonicParsing="false" onAction="#enroll" styleClass="trans-btn-white-border" stylesheets="@style.css" text="Enroll" />
+                        <Button fx:id="switchTable_button" layoutX="255.0" layoutY="48.0" mnemonicParsing="false" onAction="#switchTable" styleClass="blue-btn" stylesheets="@style.css" text="See my Races" />
+                     </children>
+                     <StackPane.margin>
+                        <Insets bottom="20.0" left="40.0" right="40.0" top="40.0" />
+                     </StackPane.margin>
+                  </Pane>
+                  <Pane fx:id="boatPayment_pane" prefHeight="362.0" prefWidth="505.0" styleClass="blue-panel" stylesheets="@style.css" visible="false">
+                     <children>
+                        <VBox layoutX="40.0" layoutY="80.0" prefHeight="106.0" prefWidth="170.0">
+                           <children>
+                              <HBox alignment="CENTER_LEFT" prefHeight="30.0" prefWidth="245.0">
+                                 <children>
+                                    <Label text="Boat:" textFill="WHITE">
+                                       <font>
+                                          <Font size="16.0" />
+                                       </font>
+                                    </Label>
+                                    <Label fx:id="boatName_label" text="boat_name" textFill="WHITE">
+                                       <font>
+                                          <Font size="15.0" />
+                                       </font>
+                                       <HBox.margin>
+                                          <Insets left="20.0" />
+                                       </HBox.margin>
+                                    </Label>
+                                 </children>
+                              </HBox>
+                              <HBox alignment="CENTER_LEFT" prefHeight="30.0" prefWidth="245.0">
+                                 <children>
+                                    <Label text="Price:" textFill="WHITE">
+                                       <font>
+                                          <Font size="16.0" />
+                                       </font>
+                                    </Label>
+                                    <Label fx:id="boatPrice_label" prefHeight="21.0" prefWidth="75.0" text="boat_price" textFill="WHITE">
+                                       <font>
+                                          <Font size="15.0" />
+                                       </font>
+                                       <HBox.margin>
+                                          <Insets left="20.0" />
+                                       </HBox.margin>
+                                    </Label>
+                                 </children>
+                                 <VBox.margin>
+                                    <Insets top="36.0" />
+                                 </VBox.margin>
+                              </HBox>
+                           </children>
+                        </VBox>
+                        <VBox layoutX="262.0" layoutY="124.0" prefHeight="82.0" prefWidth="163.0">
+                           <children>
+                              <Label text="Payment:" textFill="WHITE">
+                                 <font>
+                                    <Font size="16.0" />
+                                 </font>
+                                 <VBox.margin>
+                                    <Insets top="10.0" />
+                                 </VBox.margin>
+                              </Label>
+                              <ChoiceBox fx:id="boatPayment_cb" prefWidth="150.0" styleClass="cb">
+                                 <VBox.margin>
+                                    <Insets />
+                                 </VBox.margin>
+                              </ChoiceBox>
+                           </children>
+                        </VBox>
+                        <Label layoutX="138.0" layoutY="14.0" text="Boat Payment Process" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="22.0" />
+                           </font>
+                        </Label>
+                        <Button layoutX="268.0" layoutY="267.0" mnemonicParsing="false" onAction="#payBoat" prefHeight="33.0" prefWidth="152.0" styleClass="blue-btn" stylesheets="@style.css" text="Confirm Payment">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                        </Button>
+                        <HBox fx:id="boatIban_box" alignment="CENTER_LEFT" layoutX="41.0" layoutY="212.0" prefHeight="30.0" prefWidth="376.0" visible="false">
+                           <children>
+                              <Label text="IBAN:" textFill="WHITE">
+                                 <font>
+                                    <Font size="16.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="boatIban_label" prefHeight="21.0" prefWidth="306.0" text="iban" textFill="WHITE">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets left="20.0" />
+                                 </HBox.margin>
+                              </Label>
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER_LEFT" layoutX="257.0" layoutY="80.0" prefHeight="30.0" prefWidth="173.0">
+                           <children>
+                              <Label text="Length:" textFill="WHITE">
+                                 <font>
+                                    <Font size="16.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="boatLength_label" text="boat_length" textFill="WHITE">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets left="20.0" />
+                                 </HBox.margin>
+                              </Label>
+                           </children>
+                        </HBox>
+                        <Button layoutX="80.0" layoutY="16.0" mnemonicParsing="false" onAction="#backToBoatPane" prefHeight="19.0" prefWidth="19.0" styleClass="trans-btn" stylesheets="@style.css">
+                           <graphic>
+                              <ImageView fitHeight="26.0" fitWidth="21.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@icons/white_back.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                     </children>
+                     <StackPane.margin>
+                        <Insets bottom="60.0" left="30.0" right="30.0" top="60.0" />
+                     </StackPane.margin>
+                  </Pane>
+                  <Pane fx:id="addBoat_pane" prefHeight="330.0" prefWidth="325.0" styleClass="pane" visible="false">
+                     <StackPane.margin>
+                        <Insets bottom="60.0" left="120.0" right="120.0" top="60.0" />
+                     </StackPane.margin>
+                     <children>
+                        <Label layoutX="112.0" layoutY="27.0" text="New Boat" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="22.0" />
+                           </font>
+                        </Label>
+                        <VBox layoutX="39.0" layoutY="97.0" prefHeight="149.0" prefWidth="247.0">
+                           <children>
+                              <HBox alignment="CENTER" prefHeight="33.0" prefWidth="213.0">
+                                 <children>
+                                    <Label text="Boat Name:" textFill="WHITE">
+                                       <font>
+                                          <Font size="15.0" />
+                                       </font>
+                                    </Label>
+                                    <TextField fx:id="boatName_textField" styleClass="tf_box" stylesheets="@style.css">
+                                       <HBox.margin>
+                                          <Insets left="15.0" />
+                                       </HBox.margin>
+                                    </TextField>
+                                 </children>
+                              </HBox>
+                              <HBox alignment="CENTER" prefHeight="33.0" prefWidth="213.0">
+                                 <children>
+                                    <Label text="Boat length:" textFill="WHITE">
+                                       <font>
+                                          <Font size="15.0" />
+                                       </font>
+                                    </Label>
+                                    <TextField fx:id="boatLength_textField" styleClass="tf_box" stylesheets="@style.css">
+                                       <HBox.margin>
+                                          <Insets left="15.0" />
+                                       </HBox.margin>
+                                    </TextField>
+                                 </children>
+                                 <VBox.margin>
+                                    <Insets top="20.0" />
+                                 </VBox.margin>
+                              </HBox>
+                              <HBox alignment="CENTER_LEFT" prefHeight="32.0" prefWidth="247.0">
+                                 <children>
+                                    <Label text="Boat Price:" textFill="WHITE">
+                                       <font>
+                                          <Font size="15.0" />
+                                       </font>
+                                       <HBox.margin>
+                                          <Insets left="2.0" />
+                                       </HBox.margin>
+                                    </Label>
+                                    <Label fx:id="newBoatPrice_label" text="price" textFill="WHITE">
+                                       <font>
+                                          <Font size="15.0" />
+                                       </font>
+                                       <HBox.margin>
+                                          <Insets left="10.0" />
+                                       </HBox.margin>
+                                    </Label>
+                                 </children>
+                                 <VBox.margin>
+                                    <Insets top="30.0" />
+                                 </VBox.margin>
+                              </HBox>
+                           </children>
+                        </VBox>
+                        <Button layoutX="36.0" layoutY="29.0" mnemonicParsing="false" onAction="#backToBoatPane" prefHeight="25.0" prefWidth="15.0" styleClass="trans-btn" stylesheets="@style.css">
+                           <graphic>
+                              <ImageView fitHeight="26.0" fitWidth="21.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@icons/white_back.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                        <Button layoutX="105.0" layoutY="270.0" mnemonicParsing="false" onAction="#confirmNewBoat" prefHeight="32.0" prefWidth="115.0" styleClass="trans-btn-white-border" stylesheets="@style.css" text="Add Boat">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                        </Button>
+                     </children>
+                  </Pane>
+                  <Pane fx:id="boats_pane" prefHeight="200.0" prefWidth="200.0" styleClass="white-background" stylesheets="@style.css" visible="false">
+                     <children>
+                        <ScrollPane fx:id="boats_scrollPane" prefHeight="462.0" prefWidth="565.0" stylesheets="@style.css">
+                           <content>
+                              <GridPane fx:id="boats_gridPane" prefHeight="95.0" prefWidth="201.0">
+                                 <columnConstraints>
+                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                 </columnConstraints>
+                                 <rowConstraints>
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                 </rowConstraints>
+                              </GridPane>
+                           </content>
+                        </ScrollPane>
+                     </children>
+                  </Pane>
+                  <Pane fx:id="addCreditCard_pane" prefHeight="200.0" prefWidth="200.0" styleClass="blue-panel" stylesheets="@style.css" visible="false">
+                     <StackPane.margin>
+                        <Insets bottom="80.0" left="30.0" right="30.0" top="80.0" />
+                     </StackPane.margin>
+                     <children>
+                        <Label layoutX="170.0" layoutY="23.0" text="Add Credit Card" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="22.0" />
+                           </font>
+                        </Label>
+                        <VBox layoutX="25.0" layoutY="89.0" prefHeight="132.0" prefWidth="455.0">
+                           <children>
+                              <HBox alignment="CENTER_LEFT" prefHeight="38.0" prefWidth="455.0">
+                                 <children>
+                                    <Label text="Card number:" textFill="WHITE">
+                                       <font>
+                                          <Font size="15.0" />
+                                       </font>
+                                    </Label>
+                                    <TextField fx:id="cardNum_textField" prefHeight="26.0" prefWidth="188.0" styleClass="tf_box" stylesheets="@style.css">
+                                       <HBox.margin>
+                                          <Insets left="15.0" />
+                                       </HBox.margin>
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </TextField>
+                                    <Label text="CVV:" textFill="WHITE">
+                                       <font>
+                                          <Font size="15.0" />
+                                       </font>
+                                       <HBox.margin>
+                                          <Insets left="26.0" />
+                                       </HBox.margin>
+                                    </Label>
+                                    <TextField fx:id="cvv_textField" prefHeight="26.0" prefWidth="60.0" styleClass="tf_box" stylesheets="@style.css">
+                                       <HBox.margin>
+                                          <Insets left="10.0" />
+                                       </HBox.margin>
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </TextField>
+                                 </children>
+                              </HBox>
+                              <HBox alignment="CENTER_LEFT" prefHeight="38.0" prefWidth="455.0">
+                                 <children>
+                                    <Label text="Owner:" textFill="WHITE">
+                                       <font>
+                                          <Font size="15.0" />
+                                       </font>
+                                    </Label>
+                                    <TextField fx:id="owner_textField" prefHeight="31.0" prefWidth="144.0" promptText="Firstname Lastname" styleClass="tf_box" stylesheets="@style.css">
+                                       <HBox.margin>
+                                          <Insets left="15.0" />
+                                       </HBox.margin>
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </TextField>
+                                    <Label text="Expiration date:" textFill="WHITE">
+                                       <font>
+                                          <Font size="15.0" />
+                                       </font>
+                                       <HBox.margin>
+                                          <Insets left="25.0" />
+                                       </HBox.margin>
+                                    </Label>
+                                    <TextField fx:id="expirDate_textField" prefHeight="26.0" prefWidth="66.0" promptText="MM/YY" styleClass="tf_box" stylesheets="@style.css">
+                                       <HBox.margin>
+                                          <Insets left="15.0" />
+                                       </HBox.margin>
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </TextField>
+                                 </children>
+                                 <VBox.margin>
+                                    <Insets top="30.0" />
+                                 </VBox.margin>
+                              </HBox>
+                           </children>
+                        </VBox>
+                        <Button layoutX="192.0" layoutY="230.0" mnemonicParsing="false" onAction="#confirmNewCreditCard" prefHeight="33.0" prefWidth="122.0" styleClass="trans-btn-white-border" stylesheets="@style.css" text="Confirm">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                        </Button>
+                        <Button layoutX="25.0" layoutY="27.0" mnemonicParsing="false" onAction="#backToCreditCard" prefHeight="24.0" prefWidth="25.0" styleClass="trans-btn" stylesheets="@style.css">
+                           <graphic>
+                              <ImageView fitHeight="35.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@icons/white_back.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                     </children>
+                  </Pane>
+                  <Pane fx:id="creditCards_pane" prefHeight="462.0" prefWidth="556.0" styleClass="white-background" stylesheets="@style.css" visible="false">
+                     <children>
+                        <ScrollPane fx:id="creditCards_scrollPane" prefHeight="462.0" prefWidth="565.0" stylesheets="@style.css">
+                           <content>
+                              <GridPane fx:id="creditCards_gridPane" prefHeight="95.0" prefWidth="201.0">
+                                 <columnConstraints>
+                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                 </columnConstraints>
+                                 <rowConstraints>
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                 </rowConstraints>
+                              </GridPane>
+                           </content>
+                        </ScrollPane>
+                     </children>
+                  </Pane>
+                  <Pane fx:id="notification_pane" prefHeight="200.0" prefWidth="200.0" visible="false">
+                     <StackPane.margin>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                     </StackPane.margin>
+                     <children>
+                        <ScrollPane fx:id="notif_scrollPane" layoutX="-3.0" layoutY="-4.0" prefHeight="446.0" prefWidth="549.0">
+                           <content>
+                              <GridPane fx:id="notif_gridPane" prefHeight="95.0" prefWidth="201.0">
+                                 <columnConstraints>
+                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                 </columnConstraints>
+                                 <rowConstraints>
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                 </rowConstraints>
+                              </GridPane>
+                           </content>
+                        </ScrollPane>
+                     </children>
+                  </Pane>
+                  <Pane fx:id="annualFeePayment_pane" prefHeight="200.0" prefWidth="200.0" styleClass="blue-panel" stylesheets="@style.css" visible="false">
+                     <children>
+                        <VBox layoutX="267.0" layoutY="129.0" prefHeight="65.0" prefWidth="163.0">
+                           <children>
+                              <Label text="Payment:" textFill="WHITE">
+                                 <font>
+                                    <Font size="16.0" />
+                                 </font>
+                                 <VBox.margin>
+                                    <Insets />
+                                 </VBox.margin>
+                              </Label>
+                              <ChoiceBox fx:id="annualFeePay_cb" prefWidth="150.0" styleClass="cb">
+                                 <VBox.margin>
+                                    <Insets />
+                                 </VBox.margin>
+                              </ChoiceBox>
+                           </children>
+                        </VBox>
+                        <Label layoutX="137.0" layoutY="14.0" text="Annual Fee Payment" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="22.0" />
+                           </font>
+                        </Label>
+                        <HBox fx:id="annualFeeIban_box" alignment="CENTER_LEFT" layoutX="63.0" layoutY="194.0" prefHeight="30.0" prefWidth="360.0">
+                           <children>
+                              <Label text="IBAN:" textFill="WHITE">
+                                 <font>
+                                    <Font size="16.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="annualFeeIban_label" prefHeight="21.0" prefWidth="296.0" text="iban" textFill="WHITE">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets left="20.0" />
+                                 </HBox.margin>
+                              </Label>
+                           </children>
+                        </HBox>
+                        <Button layoutX="159.0" layoutY="243.0" mnemonicParsing="false" onAction="#payAnnualFee" prefHeight="33.0" prefWidth="152.0" styleClass="blue-btn" stylesheets="@style.css" text="Confirm Payment">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                        </Button>
+                        <Label layoutX="142.0" layoutY="53.0" prefHeight="26.0" prefWidth="185.0" text="Your annual fee has expired. " textFill="WHITE" wrapText="true">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="95.0" layoutY="79.0" text="Make the payment to continue using the portal." textFill="WHITE">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <HBox alignment="CENTER_LEFT" layoutX="63.0" layoutY="132.0" prefHeight="30.0" prefWidth="126.0" visible="false">
+                           <children>
+                              <Label text="Price:" textFill="WHITE">
+                                 <font>
+                                    <Font size="16.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="annualFeePrice_label" text="1000€" textFill="WHITE">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets left="20.0" />
+                                 </HBox.margin>
+                              </Label>
+                           </children>
+                        </HBox>
+                     </children>
+                     <StackPane.margin>
+                        <Insets bottom="70.0" left="40.0" right="40.0" top="70.0" />
+                     </StackPane.margin>
+                  </Pane>
+                  <Pane fx:id="storageFeePayment_pane" prefHeight="200.0" prefWidth="200.0" styleClass="blue-panel" stylesheets="@style.css" visible="false">
+                     <children>
+                        <VBox layoutX="243.0" layoutY="81.0" prefHeight="65.0" prefWidth="163.0">
+                           <children>
+                              <Label text="Payment:" textFill="WHITE">
+                                 <font>
+                                    <Font size="16.0" />
+                                 </font>
+                                 <VBox.margin>
+                                    <Insets />
+                                 </VBox.margin>
+                              </Label>
+                              <ChoiceBox fx:id="storageFee_cb" prefWidth="150.0" styleClass="cb">
+                                 <VBox.margin>
+                                    <Insets />
+                                 </VBox.margin>
+                              </ChoiceBox>
+                           </children>
+                        </VBox>
+                        <Label layoutX="107.0" layoutY="14.0" text="Boat Storage Payment" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="22.0" />
+                           </font>
+                        </Label>
+                        <HBox fx:id="storageFeeIban_box" alignment="CENTER_LEFT" layoutX="50.0" layoutY="183.0" prefHeight="30.0" prefWidth="360.0" visible="false">
+                           <children>
+                              <Label text="IBAN:" textFill="WHITE">
+                                 <font>
+                                    <Font size="16.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="storageFeeIban_label" prefHeight="21.0" prefWidth="296.0" text="iban" textFill="WHITE">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets left="20.0" />
+                                 </HBox.margin>
+                              </Label>
+                           </children>
+                        </HBox>
+                        <Button layoutX="159.0" layoutY="243.0" mnemonicParsing="false" onAction="#payStorageFee" prefHeight="33.0" prefWidth="152.0" styleClass="blue-btn" stylesheets="@style.css" text="Confirm Payment">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                        </Button>
+                        <VBox layoutX="50.0" layoutY="81.0" prefHeight="102.0" prefWidth="152.0">
+                           <children>
+                              <HBox alignment="CENTER_LEFT" prefHeight="33.0" prefWidth="152.0">
+                                 <children>
+                                    <Label prefHeight="21.0" prefWidth="46.0" text="Boat: " textFill="WHITE">
+                                       <font>
+                                          <Font size="15.0" />
+                                       </font>
+                                    </Label>
+                                    <Label fx:id="storageFeeBoat_label" text="boat name" textFill="WHITE">
+                                       <font>
+                                          <Font size="15.0" />
+                                       </font>
+                                       <HBox.margin>
+                                          <Insets left="10.0" />
+                                       </HBox.margin>
+                                    </Label>
+                                 </children>
+                              </HBox>
+                              <HBox alignment="CENTER_LEFT" prefHeight="33.0" prefWidth="152.0">
+                                 <children>
+                                    <Label prefHeight="21.0" prefWidth="85.0" text="Storage fee:" textFill="WHITE">
+                                       <font>
+                                          <Font size="15.0" />
+                                       </font>
+                                    </Label>
+                                    <Label fx:id="storageFeePrice_label" prefHeight="21.0" prefWidth="55.0" text="price" textFill="WHITE">
+                                       <font>
+                                          <Font size="15.0" />
+                                       </font>
+                                       <HBox.margin>
+                                          <Insets left="10.0" />
+                                       </HBox.margin>
+                                    </Label>
+                                 </children>
+                                 <VBox.margin>
+                                    <Insets top="20.0" />
+                                 </VBox.margin>
+                              </HBox>
+                           </children>
+                        </VBox>
+                        <Button layoutX="50.0" layoutY="18.0" mnemonicParsing="false" onAction="#backToBoats" prefHeight="24.0" prefWidth="25.0" styleClass="trans-btn" stylesheets="@style.css">
+                           <graphic>
+                              <ImageView fitHeight="35.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@icons/white_back.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                     </children>
+                     <StackPane.margin>
+                        <Insets bottom="70.0" left="60.0" right="60.0" top="70.0" />
+                     </StackPane.margin>
+                  </Pane>
+               </children>
+            </StackPane>
+         </center>
+      </BorderPane>
+   </children>
+</AnchorPane>

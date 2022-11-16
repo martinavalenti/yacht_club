@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="139.0" prefWidth="254.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="it.unipr.client.controllers.CreditCardController">
+    <children>
+        <Pane prefHeight="139.0" prefWidth="254.0" styleClass="credit-card" stylesheets="@style.css">
+            <children>
+                <VBox prefHeight="139.0" prefWidth="254.0">
+                    <children>
+                        <HBox prefHeight="59.0" prefWidth="354.0">
+                            <children>
+                        <ImageView fitHeight="40.0" fitWidth="39.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@icons/credit-card.png" />
+                           </image>
+                           <HBox.margin>
+                              <Insets left="10.0" top="10.0" />
+                           </HBox.margin>
+                        </ImageView>
+                                <Label fx:id="cardNumber" alignment="CENTER" prefHeight="54.0" prefWidth="177.0" text="numbercard" textFill="WHITE">
+                                    <font>
+                                        <Font name="System Bold" size="17.0" />
+                                    </font>
+                                    <HBox.margin>
+                                        <Insets left="5.0" top="5.0" />
+                                    </HBox.margin>
+                                </Label>
+                            </children>
+                        </HBox>
+                  <HBox alignment="CENTER_LEFT" prefHeight="42.0" prefWidth="254.0">
+                     <children>
+                        <Label fx:id="owner" alignment="CENTER" prefHeight="35.0" prefWidth="178.0" text="owner" textFill="WHITE">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets left="10.0" />
+                           </HBox.margin>
+                           <padding>
+                              <Insets right="10.0" />
+                           </padding>
+                        </Label>
+                        <ImageView fitHeight="24.0" fitWidth="37.0" onMouseClicked="#deleteCard" pickOnBounds="true" preserveRatio="true">
+                           <HBox.margin>
+                              <Insets left="10.0" right="10.0" />
+                           </HBox.margin>
+                           <image>
+                              <Image url="@icons/delete.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </HBox>
+                        <HBox prefHeight="44.0" prefWidth="254.0">
+                            <children>
+                                <Label fx:id="cvc" alignment="CENTER" prefHeight="72.0" prefWidth="57.0" text="cvc" textFill="WHITE">
+                                    <font>
+                                        <Font size="15.0" />
+                                    </font>
+                                    <HBox.margin>
+                                        <Insets left="58.0" />
+                                    </HBox.margin>
+                                </Label>
+                                <Label fx:id="expirationDate" alignment="CENTER" prefHeight="80.0" prefWidth="99.0" text="MM/YY" textFill="WHITE" wrapText="true">
+                                    <font>
+                                        <Font size="15.0" />
+                                    </font>
+                                    <HBox.margin>
+                                        <Insets left="25.0" />
+                                    </HBox.margin>
+                                </Label>
+                            </children>
+                     <padding>
+                        <Insets bottom="10.0" />
+                     </padding>
+                        </HBox>
+                    </children>
+                </VBox>
+            </children>
+        </Pane>
+    </children>
+</AnchorPane>

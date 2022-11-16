@@ -1,0 +1,12 @@
+module:Client
+it.unipr.client
+it.unipr.client.controllers
+it.unipr.client.main
+module:Server
+it.unipr.server
+it.unipr.server.controllers
+it.unipr.server.main
+module:YachtClub
+it.unipr.classes
+it.unipr.connection
+it.unipr.constants

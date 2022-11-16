@@ -1,0 +1,267 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="anchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="880.0" styleClass="parent" stylesheets="@style.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="it.unipr.server.controllers.ServerLoginController">
+   <children>
+      <Pane fx:id="signInPane" prefHeight="400.0" prefWidth="880.0" styleClass="pane" stylesheets="@style.css">
+         <children>
+            <Label fx:id="text_2" layoutX="46.0" layoutY="200.0" prefHeight="90.0" prefWidth="265.0" text="Signin with your admin credentials to start the system server." textFill="#f2f2f2" wrapText="true">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <VBox layoutX="440.0" layoutY="49.0" prefHeight="292.0" prefWidth="306.0" styleClass="blue-panel" stylesheets="@style.css">
+               <children>
+                  <HBox alignment="CENTER_LEFT" prefHeight="70.0" prefWidth="306.0">
+                     <children>
+                        <Label fx:id="login_label" prefHeight="32.0" prefWidth="131.0" text="Admin Login" textFill="#2196f3">
+                           <font>
+                              <Font size="22.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets left="15.0" />
+                           </HBox.margin>
+                        </Label>
+                        <ImageView fx:id="login_icon" fitHeight="48.0" fitWidth="91.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@icons/group.png" />
+                           </image>
+                        </ImageView>
+                        <ImageView fx:id="new_account_icon" fitHeight="27.0" fitWidth="28.0" pickOnBounds="true" preserveRatio="true" visible="false">
+                           <image>
+                              <Image url="@icons/add-user.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER_LEFT" prefHeight="40.0" prefWidth="306.0" styleClass="tf-box" stylesheets="@style.css">
+                     <VBox.margin>
+                        <Insets />
+                     </VBox.margin>
+                     <children>
+                        <TextField fx:id="username_field" onMouseClicked="#clearError" promptText="username" styleClass="tf_box" stylesheets="@style.css" HBox.hgrow="ALWAYS">
+                           <HBox.margin>
+                              <Insets left="15.0" right="15.0" top="30.0" />
+                           </HBox.margin>
+                        </TextField>
+                        <ImageView fitHeight="33.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@icons/user.png" />
+                           </image>
+                           <HBox.margin>
+                              <Insets right="20.0" top="30.0" />
+                           </HBox.margin>
+                        </ImageView>
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER_LEFT" prefHeight="40.0" prefWidth="306.0" styleClass="tf-box" stylesheets="@style.css">
+                     <children>
+                        <PasswordField fx:id="psw_field" onMouseClicked="#clearError" promptText="password" styleClass="tf_box" stylesheets="@style.css" HBox.hgrow="ALWAYS">
+                           <HBox.margin>
+                              <Insets left="15.0" right="15.0" top="20.0" />
+                           </HBox.margin>
+                        </PasswordField>
+                        <ImageView fitHeight="26.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@icons/padlock.png" />
+                           </image>
+                           <HBox.margin>
+                              <Insets right="20.0" top="20.0" />
+                           </HBox.margin>
+                        </ImageView>
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER_LEFT" prefHeight="39.0" prefWidth="306.0">
+                     <VBox.margin>
+                        <Insets top="10.0" />
+                     </VBox.margin>
+                     <children>
+                        <Button fx:id="signIn_btn" mnemonicParsing="false" onAction="#start" prefHeight="30.0" prefWidth="291.0" styleClass="blue-btn" stylesheets="@style.css" text="Sign In" HBox.hgrow="ALWAYS">
+                           <HBox.margin>
+                              <Insets left="15.0" right="15.0" top="20.0" />
+                           </HBox.margin>
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                        </Button>
+                     </children>
+                  </HBox>
+                  <Label fx:id="error_label" alignment="TOP_LEFT" prefHeight="20.0" prefWidth="301.0" textFill="#f2f2f2" wrapText="true">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets left="15.0" right="15.0" top="8.0" />
+                     </VBox.margin>
+                  </Label>
+               </children>
+            </VBox>
+            <Label layoutX="21.0" layoutY="51.0" prefHeight="103.0" prefWidth="289.0" text="YachtClub Admin Area" textFill="WHITE" wrapText="true">
+               <font>
+                  <Font name="System Bold" size="28.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="103.0" fitWidth="160.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@icons/sailboat.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Label>
+            <ImageView fitHeight="24.0" fitWidth="24.0" layoutX="854.0" layoutY="2.0" onMouseClicked="#close" onMousePressed="#close" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@icons/white_cross.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="39.0" fitWidth="33.0" layoutX="227.0" layoutY="176.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@icons/configuration.png" />
+               </image>
+            </ImageView>
+            <Label fx:id="text_21" layoutX="46.0" layoutY="168.0" prefHeight="48.0" prefWidth="187.0" text="Server configuration" textFill="#f2f2f2" wrapText="true">
+               <font>
+                  <Font size="19.0" />
+               </font>
+            </Label>
+            <StackPane fx:id="serverPane" prefHeight="400.0" prefWidth="880.0" stylesheets="@style.css" visible="false">
+               <children>
+                  <Pane prefHeight="400.0" prefWidth="880.0" styleClass="pane" stylesheets="@style.css">
+                     <children>
+                        <VBox layoutX="440.0" layoutY="49.0" prefHeight="292.0" prefWidth="306.0" styleClass="blue-panel" stylesheets="@style.css">
+                           <children>
+                              <HBox alignment="CENTER_LEFT" prefHeight="70.0" prefWidth="306.0">
+                                 <children>
+                                    <Label fx:id="login_label1" prefHeight="32.0" prefWidth="198.0" text="Server Information" textFill="#2196f3">
+                                       <font>
+                                          <Font size="22.0" />
+                                       </font>
+                                       <HBox.margin>
+                                          <Insets left="15.0" />
+                                       </HBox.margin>
+                                    </Label>
+                                    <ImageView fx:id="new_account_icon1" fitHeight="27.0" fitWidth="28.0" pickOnBounds="true" preserveRatio="true" visible="false">
+                                       <image>
+                                          <Image url="@icons/add-user.png" />
+                                       </image>
+                                    </ImageView>
+                                 </children>
+                              </HBox>
+                              <HBox alignment="CENTER_LEFT" prefHeight="40.0" prefWidth="306.0" styleClass="tf-box" stylesheets="@style.css">
+                                 <VBox.margin>
+                                    <Insets top="26.0" />
+                                 </VBox.margin>
+                                 <children>
+                                    <Label prefHeight="25.0" prefWidth="108.0" text="IP address:" textFill="WHITE">
+                                       <font>
+                                          <Font size="16.0" />
+                                       </font>
+                                       <HBox.margin>
+                                          <Insets left="20.0" />
+                                       </HBox.margin>
+                                    </Label>
+                                    <Label fx:id="IPaddress" prefHeight="25.0" prefWidth="184.0" text="address" textFill="WHITE">
+                                       <font>
+                                          <Font size="16.0" />
+                                       </font>
+                                       <HBox.margin>
+                                          <Insets left="20.0" right="20.0" />
+                                       </HBox.margin>
+                                    </Label>
+                                 </children>
+                              </HBox>
+                              <HBox alignment="CENTER_LEFT" prefHeight="40.0" prefWidth="306.0" styleClass="tf-box" stylesheets="@style.css">
+                                 <children>
+                                    <Label text="Port:" textFill="WHITE">
+                                       <font>
+                                          <Font size="16.0" />
+                                       </font>
+                                       <HBox.margin>
+                                          <Insets left="20.0" />
+                                       </HBox.margin>
+                                    </Label>
+                                    <Label fx:id="port" prefHeight="25.0" prefWidth="204.0" text="port" textFill="WHITE">
+                                       <font>
+                                          <Font size="16.0" />
+                                       </font>
+                                       <padding>
+                                          <Insets left="20.0" right="15.0" />
+                                       </padding>
+                                    </Label>
+                                 </children>
+                                 <VBox.margin>
+                                    <Insets top="20.0" />
+                                 </VBox.margin>
+                              </HBox>
+                              <HBox alignment="CENTER_LEFT" prefHeight="39.0" prefWidth="306.0">
+                                 <VBox.margin>
+                                    <Insets top="10.0" />
+                                 </VBox.margin>
+                                 <children>
+                                    <Button fx:id="signIn_btn1" mnemonicParsing="false" onAction="#stopServer" prefHeight="35.0" prefWidth="291.0" styleClass="blue-btn" stylesheets="@style.css" text="STOP SERVER" HBox.hgrow="ALWAYS">
+                                       <HBox.margin>
+                                          <Insets left="30.0" right="30.0" top="20.0" />
+                                       </HBox.margin>
+                                       <font>
+                                          <Font size="15.0" />
+                                       </font>
+                                    </Button>
+                                 </children>
+                              </HBox>
+                              <Label fx:id="error_label1" alignment="TOP_LEFT" prefHeight="30.0" prefWidth="301.0" textFill="#f2f2f2" wrapText="true">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                                 <VBox.margin>
+                                    <Insets left="15.0" right="15.0" />
+                                 </VBox.margin>
+                              </Label>
+                           </children>
+                        </VBox>
+                        <Label layoutX="21.0" layoutY="51.0" prefHeight="103.0" prefWidth="289.0" text="YachtClub Admin Area" textFill="WHITE" wrapText="true">
+                           <font>
+                              <Font size="28.0" />
+                           </font>
+                           <graphic>
+                              <ImageView fitHeight="103.0" fitWidth="160.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@icons/sailboat.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Label>
+                        <ImageView fitHeight="24.0" fitWidth="24.0" layoutX="854.0" layoutY="2.0" onMouseClicked="#close" onMousePressed="#close" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@icons/white_cross.png" />
+                           </image>
+                        </ImageView>
+                        <ImageView fitHeight="39.0" fitWidth="33.0" layoutX="227.0" layoutY="176.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@icons/configuration.png" />
+                           </image>
+                        </ImageView>
+                        <Label fx:id="text_211" layoutX="46.0" layoutY="168.0" prefHeight="48.0" prefWidth="187.0" text="Server configuration" textFill="#f2f2f2" wrapText="true">
+                           <font>
+                              <Font size="19.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </Pane>
+               </children>
+            </StackPane>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

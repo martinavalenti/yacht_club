@@ -1,0 +1,339 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="anchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="510.0" prefWidth="778.0" styleClass="white_background" stylesheets="@style.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="it.unipr.client.controllers.StaffInterfaceController">
+   <children>
+      <AnchorPane prefHeight="200.0" prefWidth="200.0">
+         <children>
+            <VBox prefHeight="510.0" prefWidth="213.0" styleClass="pane" stylesheets="@style.css">
+               <children>
+                  <HBox alignment="CENTER" prefHeight="65.0" prefWidth="213.0">
+                     <children>
+                        <ImageView fitHeight="36.0" fitWidth="39.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@icons/logo.png" />
+                           </image>
+                        </ImageView>
+                        <Label prefHeight="39.0" prefWidth="152.0" text="Yacht Club" textFill="#2b3161">
+                           <font>
+                              <Font name="Colonna MT" size="32.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets left="5.0" />
+                           </HBox.margin>
+                        </Label>
+                     </children>
+                  </HBox>
+                  <HBox prefHeight="40.0" prefWidth="213.0">
+                     <children>
+                        <Button fx:id="members_btn" alignment="TOP_LEFT" mnemonicParsing="false" onAction="#showMembers" prefHeight="40.0" prefWidth="276.0" styleClass="trans-btn" stylesheets="@style.css" text="Members">
+                           <font>
+                              <Font name="System Bold" size="19.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets left="10.0" />
+                           </HBox.margin>
+                        </Button>
+                     </children>
+                     <VBox.margin>
+                        <Insets top="20.0" />
+                     </VBox.margin>
+                  </HBox>
+                  <HBox prefHeight="40.0" prefWidth="213.0">
+                     <children>
+                        <Button fx:id="boats_btn" alignment="TOP_LEFT" mnemonicParsing="false" onAction="#showBoats" prefHeight="40.0" prefWidth="276.0" styleClass="trans-btn" stylesheets="@style.css" text="Boats">
+                           <font>
+                              <Font name="System Bold" size="19.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets left="10.0" />
+                           </HBox.margin>
+                        </Button>
+                     </children>
+                     <VBox.margin>
+                        <Insets top="15.0" />
+                     </VBox.margin>
+                  </HBox>
+                  <HBox prefHeight="40.0" prefWidth="213.0">
+                     <children>
+                        <Button fx:id="races_btn" alignment="TOP_LEFT" mnemonicParsing="false" onAction="#showRaces" prefHeight="40.0" prefWidth="276.0" styleClass="trans-btn" stylesheets="@style.css" text="Races">
+                           <font>
+                              <Font name="System Bold" size="19.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets left="10.0" />
+                           </HBox.margin>
+                        </Button>
+                     </children>
+                     <VBox.margin>
+                        <Insets top="15.0" />
+                     </VBox.margin>
+                  </HBox>
+                  <HBox alignment="TOP_CENTER" prefHeight="40.0" prefWidth="213.0">
+                     <children>
+                        <Button fx:id="payments_btn" alignment="TOP_LEFT" mnemonicParsing="false" onAction="#showPayments" prefHeight="40.0" prefWidth="276.0" styleClass="trans-btn" stylesheets="@style.css" text="Payments">
+                           <font>
+                              <Font name="System Bold" size="19.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets left="10.0" />
+                           </HBox.margin>
+                        </Button>
+                     </children>
+                     <VBox.margin>
+                        <Insets top="15.0" />
+                     </VBox.margin>
+                  </HBox>
+               </children>
+            </VBox>
+         </children>
+      </AnchorPane>
+      <BorderPane layoutX="213.0" prefHeight="511.0" prefWidth="565.0">
+         <top>
+            <Pane prefHeight="49.0" prefWidth="565.0" stylesheets="@style.css" BorderPane.alignment="CENTER">
+               <children>
+                  <HBox alignment="BOTTOM_LEFT" prefHeight="48.0" prefWidth="191.0">
+                     <children>
+                        <Button mnemonicParsing="false" prefHeight="39.0" prefWidth="43.0" styleClass="trans-btn" stylesheets="@style.css">
+                           <graphic>
+                              <ImageView fitHeight="24.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@icons/user2.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                           <HBox.margin>
+                              <Insets left="20.0" />
+                           </HBox.margin>
+                        </Button>
+                        <Label fx:id="navBar_username" prefHeight="27.0" prefWidth="92.0" text="username" textFill="#2196f3">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets bottom="5.0" />
+                           </HBox.margin>
+                        </Label>
+                     </children>
+                  </HBox>
+                  <HBox alignment="BOTTOM_RIGHT" layoutX="446.0" prefHeight="46.0" prefWidth="90.0">
+                     <children>
+                        <Button mnemonicParsing="false" onAction="#logout" prefHeight="35.0" prefWidth="40.0" styleClass="trans-btn" stylesheets="@style.css">
+                           <graphic>
+                              <ImageView fitHeight="24.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@icons/exit.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                     </children>
+                  </HBox>
+               </children>
+            </Pane>
+         </top>
+         <center>
+            <StackPane prefHeight="462.0" prefWidth="565.0" BorderPane.alignment="CENTER">
+               <children>
+                  <Pane fx:id="addNewRace_pane" prefHeight="200.0" prefWidth="200.0" styleClass="blue-panel" stylesheets="@style.css" visible="false">
+                     <children>
+                        <Label layoutX="87.0" layoutY="27.0" text="Add New Race" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="22.0" />
+                           </font>
+                        </Label>
+                        <Button layoutX="87.0" layoutY="273.0" mnemonicParsing="false" onAction="#addNewRace" prefHeight="33.0" prefWidth="152.0" styleClass="blue-btn" stylesheets="@style.css" text="Done">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                        </Button>
+                        <VBox layoutX="76.0" layoutY="86.0" prefHeight="123.0" prefWidth="173.0">
+                           <children>
+                              <TextField fx:id="raceName_textField" promptText="Race name" styleClass="tf_box" stylesheets="@style.css" />
+                              <TextField fx:id="raceDate_textField" promptText="DD/MM/YYYY" styleClass="tf_box" stylesheets="@style.css">
+                                 <VBox.margin>
+                                    <Insets top="20.0" />
+                                 </VBox.margin>
+                              </TextField>
+                              <TextField fx:id="racePrice_textField" promptText="Price" styleClass="tf_box" stylesheets="@style.css">
+                                 <VBox.margin>
+                                    <Insets top="20.0" />
+                                 </VBox.margin>
+                              </TextField>
+                           </children>
+                        </VBox>
+                        <Label fx:id="newRaceError_label" layoutX="71.0" layoutY="212.0" prefHeight="50.0" prefWidth="187.0" textFill="WHITE" wrapText="true">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <Button layoutX="39.0" layoutY="30.0" mnemonicParsing="false" onAction="#backToRaces" prefHeight="26.0" prefWidth="24.0" styleClass="trans-btn" stylesheets="@style.css">
+                           <graphic>
+                              <ImageView fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@icons/white_back.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                     </children>
+                     <StackPane.margin>
+                        <Insets bottom="70.0" left="120.0" right="120.0" top="50.0" />
+                     </StackPane.margin>
+                  </Pane>
+                  <Pane fx:id="races_pane" prefHeight="406.0" prefWidth="525.0" styleClass="blue-panel" stylesheets="@style.css" visible="false">
+                     <children>
+                        <GridPane alignment="TOP_CENTER" layoutX="102.0" layoutY="118.0" prefHeight="344.0" prefWidth="362.0">
+                           <columnConstraints>
+                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                           </columnConstraints>
+                           <rowConstraints>
+                              <RowConstraints maxHeight="404.0" minHeight="10.0" prefHeight="500.0" vgrow="SOMETIMES" />
+                           </rowConstraints>
+                           <children>
+                              <TableView fx:id="raceTable" editable="true" minWidth="0.0" onMouseClicked="#getSelectedRace" prefHeight="286.0" prefWidth="353.0" styleClass="dark-table" stylesheets="@style.css">
+                                 <columns>
+                                    <TableColumn fx:id="raceName_column" prefWidth="150.0" text="Race" />
+                                    <TableColumn fx:id="raceDate_column" prefWidth="100.0" text="Date" />
+                                    <TableColumn fx:id="entryFee_column" prefWidth="100.0" text="Entry Fee" />
+                                 </columns>
+                              </TableView>
+                           </children>
+                        </GridPane>
+                        <HBox alignment="CENTER_LEFT" layoutX="102.0" layoutY="28.0" prefHeight="33.0" prefWidth="169.0">
+                           <children>
+                              <Label fx:id="race_label" contentDisplay="CENTER" prefHeight="30.0" prefWidth="165.0" text="All Races" textFill="WHITE">
+                                 <font>
+                                    <Font name="System Bold" size="22.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </HBox>
+                        <Button fx:id="switchRaces_btn" layoutX="102.0" layoutY="83.0" mnemonicParsing="false" onAction="#switchRaces" styleClass="trans-btn-white-border" stylesheets="@style.css" text="Past Races" />
+                        <Button layoutX="408.0" layoutY="83.0" mnemonicParsing="false" onAction="#deleteRace" styleClass="blue-btn" stylesheets="@style.css" text="Delete " />
+                        <Button layoutX="303.0" layoutY="83.0" mnemonicParsing="false" onAction="#showAddNewRacePane" styleClass="blue-btn" stylesheets="@style.css" text="Add New Race" />
+                     </children>
+                     <StackPane.margin>
+                        <Insets />
+                     </StackPane.margin>
+                  </Pane>
+                  <Pane fx:id="members_pane" prefHeight="406.0" prefWidth="525.0" styleClass="blue-panel" stylesheets="@style.css">
+                     <children>
+                        <GridPane alignment="TOP_CENTER" layoutX="101.0" layoutY="118.0" prefHeight="344.0" prefWidth="364.0">
+                           <columnConstraints>
+                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                           </columnConstraints>
+                           <rowConstraints>
+                              <RowConstraints maxHeight="404.0" minHeight="10.0" prefHeight="500.0" vgrow="SOMETIMES" />
+                           </rowConstraints>
+                           <children>
+                              <TableView fx:id="membersTable" editable="true" minWidth="0.0" onMouseClicked="#getSelectedRace" prefHeight="344.0" prefWidth="512.0" styleClass="dark-table" stylesheets="@style.css">
+                                 <columns>
+                                    <TableColumn fx:id="username_column" prefWidth="130.0" text="Username" />
+                                    <TableColumn fx:id="fullname_column" prefWidth="115.0" text="Full Name" />
+                                    <TableColumn fx:id="annualFee_column" prefWidth="115.0" text="Annual Fee" />
+                                 </columns>
+                              </TableView>
+                           </children>
+                        </GridPane>
+                        <HBox alignment="CENTER_LEFT" layoutX="174.0" layoutY="27.0" prefHeight="33.0" prefWidth="219.0">
+                           <children>
+                              <Label fx:id="race_label1" contentDisplay="CENTER" prefHeight="32.0" prefWidth="223.0" text="Yacht Club Members" textFill="WHITE">
+                                 <font>
+                                    <Font name="System Bold" size="22.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </HBox>
+                        <Button layoutX="349.0" layoutY="84.0" mnemonicParsing="false" onAction="#removeMember" styleClass="blue-btn" stylesheets="@style.css" text="Remove Member" />
+                        <Button layoutX="228.0" layoutY="84.0" mnemonicParsing="false" onAction="#sendAnnualFeeNotification" styleClass="trans-btn-white-border" stylesheets="@style.css" text="Send Notification" />
+                     </children>
+                  </Pane>
+                  <Pane fx:id="payments_pane" prefHeight="406.0" prefWidth="525.0" styleClass="blue-panel" stylesheets="@style.css" visible="false">
+                     <children>
+                        <GridPane alignment="TOP_CENTER" layoutX="5.0" layoutY="89.0" prefHeight="373.0" prefWidth="554.0">
+                           <columnConstraints>
+                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                           </columnConstraints>
+                           <rowConstraints>
+                              <RowConstraints maxHeight="404.0" minHeight="10.0" prefHeight="500.0" vgrow="SOMETIMES" />
+                           </rowConstraints>
+                           <children>
+                              <TableView fx:id="payments_table" editable="true" minWidth="0.0" onMouseClicked="#getSelectedRace" prefHeight="344.0" prefWidth="512.0" styleClass="dark-table" stylesheets="@style.css">
+                                 <columns>
+                                    <TableColumn fx:id="reason_column" prefWidth="150.0" text="Reason" />
+                                    <TableColumn fx:id="type_column" prefWidth="120.0" text="Type" />
+                                    <TableColumn fx:id="amount_column" text="Amount" />
+                                    <TableColumn fx:id="paymentDate_column" prefWidth="75.0" text="Date" />
+                                    <TableColumn fx:id="member_column" prefWidth="120.0" text="Member" />
+                                 </columns>
+                              </TableView>
+                           </children>
+                        </GridPane>
+                        <HBox alignment="CENTER_LEFT" layoutX="172.0" layoutY="29.0" prefHeight="33.0" prefWidth="226.0">
+                           <children>
+                              <Label fx:id="race_label11" contentDisplay="CENTER" prefHeight="32.0" prefWidth="223.0" text="Yacht Club Payments" textFill="WHITE">
+                                 <font>
+                                    <Font name="System Bold" size="22.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </HBox>
+                     </children>
+                  </Pane>
+                  <Pane fx:id="boats_pane" prefHeight="406.0" prefWidth="525.0" styleClass="blue-panel" stylesheets="@style.css" visible="false">
+                     <children>
+                        <GridPane alignment="TOP_CENTER" layoutX="64.0" layoutY="89.0" prefHeight="373.0" prefWidth="437.0">
+                           <columnConstraints>
+                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                           </columnConstraints>
+                           <rowConstraints>
+                              <RowConstraints maxHeight="404.0" minHeight="10.0" prefHeight="500.0" vgrow="SOMETIMES" />
+                           </rowConstraints>
+                           <children>
+                              <TableView fx:id="boats_table" editable="true" minWidth="0.0" onMouseClicked="#getSelectedRace" prefHeight="373.0" prefWidth="437.0" styleClass="dark-table" stylesheets="@style.css">
+                                 <columns>
+                                    <TableColumn fx:id="boat_column" prefWidth="150.0" text="Boat" />
+                                    <TableColumn fx:id="owner_column" prefWidth="120.0" text="Owner" />
+                                    <TableColumn fx:id="length_column" text="Length" />
+                                    <TableColumn fx:id="storageFee_column" prefWidth="82.0" text="Storage Fee" />
+                                 </columns>
+                              </TableView>
+                           </children>
+                        </GridPane>
+                        <HBox alignment="CENTER_LEFT" layoutX="192.0" layoutY="14.0" prefHeight="33.0" prefWidth="182.0">
+                           <children>
+                              <Label contentDisplay="CENTER" prefHeight="32.0" prefWidth="180.0" text="Yacht Club Boats" textFill="WHITE">
+                                 <font>
+                                    <Font name="System Bold" size="22.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </HBox>
+                        <Button layoutX="384.0" layoutY="56.0" mnemonicParsing="false" onAction="#sendStorageFeeNotification" styleClass="trans-btn-white-border" stylesheets="@style.css" text="Send Notification" />
+                     </children>
+                  </Pane>
+               </children>
+            </StackPane>
+         </center>
+      </BorderPane>
+   </children>
+</AnchorPane>
